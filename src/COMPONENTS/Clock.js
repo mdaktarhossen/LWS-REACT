@@ -9,11 +9,15 @@ class Clock extends Component {
   };
 
   componentDidMount(){
-    setInterval(() => {
+    this.clockTimer=setInterval(() => {
       this.setState({
         date: new Date()
       })
     }, 1000);
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.clockTimer)
   }
 
   render() {
