@@ -25,12 +25,10 @@ class Clock extends Component {
 
   render() {
     const {date,locale}=this.state;
-    console.log("clock running");
     return (
       <div>
         <h1>Hi clock</h1>
         <h1>{date.toLocaleTimeString(locale)}</h1>
-        {/* <Button text="click here" lChange={this.lanHandalar} locale="en-US"/> */}
         {locale==="bn-BD"?<Button text="click here" lChange={this.lanHandalar} locale="en-US"/>: <Button text="click here" lChange={this.lanHandalar} locale="bn-BD"/> }
       </div>
     )

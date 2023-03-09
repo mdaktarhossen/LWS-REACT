@@ -1,10 +1,10 @@
-import Clock from "./COMPONENTS/Clock";
+import ClockList from "./COMPONENTS/ClockList";
 
-function App(props) {
+function App() {
+  const quentitys=[1,2,3];
   return (
     <div>
-      <h1>{props.name}</h1>
-      <Clock />
+      <ClockList quentitys={quentitys}/>
     </div>
   )
 }
