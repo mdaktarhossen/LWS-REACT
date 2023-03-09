@@ -2,44 +2,39 @@ import React, { Component } from 'react'
 import Button from './Button';
 
 class Clock extends Component {
-  constructor(props, local){
-    super(props);
-    this.state={
-      date: new Date(),
-      local: "bn-BD",
-    };
-  };
+  state={date: new Date(),locale:"bn-BD" }
 
   componentDidMount(){
-    this.clockTimer=setInterval(() => {
+    this.timer=setInterval(() => {
       this.setState({
         date: new Date()
       })
     }, 1000);
-  }
-
-  componentWillUnmount(){
-    clearInterval(this.clockTimer)
-  }
-
-  handeler=(local)=>{
-    this.setState({
-      local:"en-US"
-    })
   };
 
+  componentWillUnmount(){
+    clearInterval(this.timer)
+  }
+
+  lanHandalar=(locale)=>{
+    this.setState({
+      locale,
+    })
+  }
+
+
   render() {
-    console.log("Clock Component render")
-    const {date,local}=this.state
+    const {date,locale}=this.state;
+    console.log("clock running");
     return (
       <div>
-        <h1>Component</h1>
-        <h1>{date.toLocaleTimeString(local)}</h1>
-        <Button onchange={this.handeler} text="click here"/>
+        <h1>Hi clock</h1>
+        <h1>{date.toLocaleTimeString(locale)}</h1>
+        {/* <Button text="click here" lChange={this.lanHandalar} locale="en-US"/> */}
+        {locale==="bn-BD"?<Button text="click here" lChange={this.lanHandalar} locale="en-US"/>: <Button text="click here" lChange={this.lanHandalar} locale="bn-BD"/> }
       </div>
-      
     )
   }
 }
-export default Clock;
 
+export default Clock;

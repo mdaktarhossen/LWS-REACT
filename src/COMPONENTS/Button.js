@@ -1,25 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Button extends Component {
-  shouldComponentUpdate(nextprops){
-    const {onchange:currentChange}=this.props;
-    const {onchange: nextChange}=nextprops;
-    if(currentChange===nextChange){
-      return false;
-    }
-    else{
-      return true;
-    }
-  }
   render() {
-    console.log("Btn Component render")
-    const {onchange, text}=this.props
+    console.log("Btn running");
+    const {text,lChange, locale}=this.props
     return (
       <div>
-        <button onClick={onchange}>{text}</button>
+        <button onClick={()=>lChange(locale)}>{text}</button>
       </div>
     )
   };
 };
-
+ 
 export default Button;
