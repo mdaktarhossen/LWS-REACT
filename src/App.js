@@ -1,8 +1,12 @@
+import Emoji from "./Composition/Emoji";
+import Text from "./Composition/Text";
 
 function App() {
   return (
     <div>
-      <h1>Statred redux course</h1>
+      <Emoji>
+       {({addEmoji})=><Text addEmoji={addEmoji}/>}
+      </Emoji>
     </div>
   )
 }
