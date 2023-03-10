@@ -1,10 +1,9 @@
-import ClockList from "./COMPONENTS/ClockList";
+import Form from "./COMPONENTS/Form";
 
 function App() {
-  const quentitys=[1,2,3];
   return (
     <div>
-      <ClockList quentitys={quentitys}/>
+      <Form/>
     </div>
   )
 }
