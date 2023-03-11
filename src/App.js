@@ -1,12 +1,22 @@
-import Emoji from "./Composition/Emoji";
-import Text from "./Composition/Text";
+
+import ClickCounter from "./COMPONENTS/ClickCounter";
+import Counter from "./COMPONENTS/Counter";
+import HoverCounter from "./COMPONENTS/HoverCounter"
 
 function App() {
   return (
     <div>
-      <Emoji>
-       {({addEmoji})=><Text addEmoji={addEmoji}/>}
-      </Emoji>
+      {/* <Users render={(islog)=>islog? "Akter": "no"}/> */}
+
+      <Counter >
+        {(Counter, handelIncrement)=><ClickCounter count={Counter} 
+        handelIncrement={handelIncrement}/>}
+      </Counter >
+
+      <Counter >
+      {(Counter, handelIncrement)=><HoverCounter count={Counter} 
+        handelIncrement={handelIncrement}/>}
+      </Counter >
     </div>
   )
 }
