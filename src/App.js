@@ -1,13 +1,10 @@
-// import Gallery from "./ADDING INTERACTIVE/Gallery";
-
-import Gallery from "./ADDING INTERACTIVE/PRATICES/Gallery";
+import Form from "./ADDING INTERACTIVE/Updating objects in state/Form";
 
 function App() {  
   return (
     <div>
       <h1>hi</h1>
-      {/* <Gallery/> */}
-      <Gallery/>
+      <Form/>
     </div>
   )
 };
