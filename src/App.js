@@ -1,22 +1,14 @@
-function Item({ name, isPacked }) {
+// import Gallery from "./ADDING INTERACTIVE/Gallery";
+
+import Gallery from "./ADDING INTERACTIVE/PRATICES/Gallery";
+
+function App() {  
   return (
     <div>
-      {isPacked?<li>{name}✔</li>: <li>{<del><li>{name}</li></del>}</li>}
+      <h1>hi</h1>
+      {/* <Gallery/> */}
+      <Gallery/>
     </div>
   )
-}
-
-export default function PackingList() {
-  return (
-    <div>
-      <section>
-        <h1>Li list</h1>
-        <Item name="1st" isPacked={true}/>
-        <Item name="2nd" isPacked={false}/>
-        <Item name="3st" isPacked={true}/>
-        <Item name="3st" isPacked={true}/>
-        <Item name="3st" isPacked={false}/>
-      </section>
-    </div>
-    );
-}
+};
+export default App;
