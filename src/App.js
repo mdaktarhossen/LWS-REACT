@@ -1,11 +1,22 @@
-import Clock from "./COMPONENTS/Clock";
-
-function App(props) {
+function Item({ name, isPacked }) {
   return (
     <div>
-      <h1>{props.name}</h1>
-      <Clock />
+      {isPacked?<li>{name}✔</li>: <li>{<del><li>{name}</li></del>}</li>}
     </div>
   )
 }
-export default App;
+
+export default function PackingList() {
+  return (
+    <div>
+      <section>
+        <h1>Li list</h1>
+        <Item name="1st" isPacked={true}/>
+        <Item name="2nd" isPacked={false}/>
+        <Item name="3st" isPacked={true}/>
+        <Item name="3st" isPacked={true}/>
+        <Item name="3st" isPacked={false}/>
+      </section>
+    </div>
+    );
+}
